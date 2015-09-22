@@ -1,0 +1,6 @@
+pip install tornado
+pip install mongokit
+pip install enum34
+pip install mako
+pip install qiniu
+pip install redis

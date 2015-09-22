@@ -1,0 +1,54 @@
+<%!
+    from config import APP, SLOGAN
+%>
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            <%block name="title">
+            <%block name="title_"></%block> | ${APP} | ${SLOGAN}
+            </%block>
+        </title>
+        <meta name="keywords" content="${APP},${SLOGAN},一块投吧,北京传媒公司,传媒,xrkmedia,投创,众筹电视节目,投创类电视节目,投创类节目"/>
+        <meta name="description" content="向日葵传媒有限责任公司是一家现时代金融文化产品提供机构，致力于将中国优秀文化产品与金融服务相结合，打造传媒与金融相结合的投融资服务平台。" />
+        <link href="${STATIC_HOST}/css/_lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="${STATIC_HOST}/css/_lib/bootstrap-dialog.min.css" rel="stylesheet">
+        <link href="${STATIC_HOST}/css/_lib/poshytip/tip-twitter/tip-twitter.css" rel="stylesheet">
+        <link href="${STATIC_HOST}/css/_lib/datepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+        <link href="${STATIC_HOST}/css/god.css" rel="stylesheet">
+
+        <%block name="css_">
+        </%block>
+        <%block name="css">
+        </%block>
+    </head>
+
+    <body>
+        <img src="${WEB_INFO.logo}?imageMogr2/thumbnail/121x75" style="display: none;"/>
+        <img src="${WEB_INFO.logo}?imageMogr2/thumbnail/75x75" style="display: none;"/>
+        ${next.body()}
+    </body>
+    <script  type="text/javascript">
+    </script>
+    <script src="${STATIC_HOST}/js/const.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/bootstrap/bootstrap.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/bootstrap-dialog.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/poshytip/jquery.poshytip.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/datepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/datepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/angularjs/angular.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/angularjs/angular-sanitize.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/headroom.min.js"></script>
+    <script src="${STATIC_HOST}/js/base.js"></script>
+    <%block name="js_">
+    </%block>
+    <%block name="js">
+    </%block>
+</html>
+

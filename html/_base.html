@@ -1,0 +1,118 @@
+<%!
+    from config import APP, APP_CN
+%>
+<%inherit file="_god.html" />
+<%block name="css_">
+<link href="${STATIC_HOST}/css/base.css" rel="stylesheet">
+</%block>
+<div name="#top" id="top"></div>
+
+<!-- Static navbar -->
+<div class="web">
+    <header class="header header--fixed hide-from-print">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header" id="header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only s-font">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand s-font" href="/" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x110)">
+                        ${APP}<br>
+                        ${APP_CN}
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="s-font" href="/">首页</a></li>
+                        <li><a class="s-font" href="/reg">报名通道</a></li>
+                        ## <li><a class="s-font" href="/fund">种子基金</a></li>
+                        <li><a class="s-font" href="/joinus">加入我们</a></li>
+                        % if current_user:
+                            <li><a class="s-font" href="">${current_user.name}</a></li>
+                            <li><a class="s-font" href="/signout">退出</a></li>
+                        % else:
+                            ## <li><a class="s-font" href="/signup">注册</a></li>
+                            <li>
+                                <a class="s-font" href="/signin">
+                                    <span id="nav-login">登录/注册</span>
+                                </a>
+                            </li>
+                        % endif
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div id="body">
+        ${next.body()}
+    </div>
+    <div id="float-banner">
+        <img src="http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.program_weixin}"/>
+        <p class="s-font">扫描关注<br>一块投吧</p>
+        <p class="float-banner-item to-top s-font">↑ TOP</p>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3 class="s-font"> 关于我们 </h3>
+                    <p>
+                        ${WEB_INFO.desc}
+                    </p>
+
+                    <p>©2015 向日葵传媒 京ICP备15039324</p>
+
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="s-font"> 联系我们 </h3>
+                    <p class="s-font"> 
+                        <span id="location">${WEB_INFO.location}</span>
+                        <br>
+                        <span id="mail"><a href="mailto:${WEB_INFO.email}">${WEB_INFO.email}</a> </span>
+                        &nbsp;&nbsp;
+                        <span id="phone">${WEB_INFO.phone}</span>
+                        <br>
+                        <span id="weibo"><a href="http://www.weibo.com/u/5652890377" target="_blank">@一块投吧</a></span>
+                        &nbsp;&nbsp;
+                        <span id="tweibo"><a href="http://t.qq.com/yikuaitouba" target="_blank" title="腾讯微博">@一块投吧</a></span>
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="s-font"> 合作伙伴 </h3>
+                    <p> 
+                        <img src="http://angelcrunch.qiniudn.com/logo_wb_red.png" width="150">
+                        &nbsp;&nbsp;
+                        <img src="http://www.putiandai.com/static/front/main/v3/images/index-new/lg-bg.png" width="150">
+                        <br>
+                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/img/tianshijie.png" width="125">
+                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/haizi.png" style="margin-left: 38px; width: 150px;">
+                        <br>
+                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/founders_space.png" style=" width: 315px; margin-top: 10px; ">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<%block name="js_">
+<script src="${STATIC_HOST}/js/index.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?3008ac45424f527aef20c2356eceb0c4";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+
+</script>
+</%block>

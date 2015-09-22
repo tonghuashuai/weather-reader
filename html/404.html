@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            @font-face { font-family:noto; src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Light.otf);}
+
+            *{
+                font-family: noto, Helvetica, 'Microsoft Yahei Light', Arial ;
+            }
+
+            body{
+                padding-top: 100px;
+            }
+            a{
+                text-decoration: none;
+                color: #999999;
+            transition: color 0.3s ease-out;
+       -moz-transition: color 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: color 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: color 0.3s ease-out;
+            }
+            a:hover{
+                text-decoration: none;
+                color: #fff;
+            transition: color 0.3s ease-out;
+       -moz-transition: color 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: color 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: color 0.3s ease-out;
+            }
+
+            .container div{
+                margin: auto;
+                text-align: center;
+            }
+
+            #logo{
+                width: 150px;
+                height: 150px;
+                background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/logo-white-border.png?imageMogr2/thumbnail/x300);
+                background-size: cover;
+            }
+
+            #err_code{
+                margin: 20px 0 20px;
+                font-size: 55px;
+            }
+
+            #msg p{
+                line-height: 15px;
+            }
+
+            #msg #msg_cn{
+                font-size: 25px;
+            }
+            #back{
+                padding: 20px;
+                border-top: solid 1px #fff;
+                margin-top: 30px;
+            }
+
+        </style>
+        <title>页面未找到 | 向日葵传媒</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="logo">&nbsp;</div>
+            <div id="err_code">Error (404)</div>
+            <div id="msg">
+                <p><span id="msg_cn">页面未找到</span></p>
+                <p><span id="msg_en">Sorry, but we can't find the page you're looking for.</span></p>
+            </div>
+            <div id="back">
+                <a href="/">回到首页</a>
+            </div>
+        </div>
+    </body>
+</html>
+

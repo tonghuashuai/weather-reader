@@ -1,0 +1,260 @@
+/********* animation *******/
+@keyframes fadein {
+    from {
+        margin-top: -0px;
+        opacity: 0
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein{ /* Firefox */ 
+    from {
+        margin-top: -0px;
+        opacity: 0
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein{ /* Safari 和 Chrome */ 
+    from {
+        margin-top: -0px;
+        opacity: 0
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein{ /* Opera */ 
+    from {
+        margin-top: -0px;
+        opacity: 0
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+/********* animation end *******/
+
+
+/***** 重写 bootstrap ******/
+
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+#body{
+
+            animation: fadein 0.5s ease-out;
+       -moz-animation: fadein 0.5s ease-out; /* Firefox */
+    -webkit-animation: fadein 0.5s ease-out;  /* Safari 和 Chrome */
+         -o-animation: fadein 0.5s ease-out;   /* Opera */
+}
+}
+
+.navbar{
+    margin-bottom: 0;
+    width: 100%;
+    position: absolute;
+}
+
+.web .navbar .navbar-brand{
+    line-height: 22px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 49px;
+    padding-left: 65px;
+    font-size: 16px;
+}
+
+
+.web .navbar ul li a{
+    line-height: 40px;
+    height: 70px;
+    font-size: 15px;
+}
+.web .navbar .navbar-toggle{
+    height: 61px;
+}
+.jumbotron{
+    margin-bottom: 0px;
+    background: none;
+}
+
+#footer{
+    background-color: #272727;
+    color: #737373;
+    padding: 20px 0 12px;
+}
+
+
+#footer .container h3{
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+#footer .container p{
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+#footer .container p span{
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding-left: 22px;
+}
+
+#footer .container p span a{
+    color: #737373;
+}
+
+#footer .container p span#location{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/location_128.png?imageMogr2/thumbnail/15x);
+    padding-left: 21px;
+}
+
+#footer .container p span#mail{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/email_L@2x.png?imageMogr2/thumbnail/24x);
+    background-position-x: -5px;
+}
+
+#footer .container p span#phone{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/phone_128.png?imageMogr2/thumbnail/10x);
+    background-position-x: 2px;
+}
+
+#footer .container p span#weibo{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_L@2x.png?imageMogr2/thumbnail/21x);
+    background-position-x: -2px;
+}
+
+#footer .container p span#tweibo{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/tencent_weibo_L@2x.png?imageMogr2/thumbnail/24x);
+    background-position-x: -2px;
+}
+
+#footer .container #txt-search{
+    background-color: #000;
+    border: none;
+    width: 310px;
+    padding: 8px;
+    outline: none;
+}
+#footer .container #btn-search{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    width: 40px;
+    margin-left: -2px;
+    outline: none
+}
+
+#footer #footer-logo{
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    margin-right: 30px;
+    float: left;
+}
+
+#footer #footer-content{
+    padding-left: 30px;
+    border-left: solid 1px rgba(255, 255, 255, 0.8);
+    float: left;
+}
+
+
+#footer #footer-content a{
+    color: rgba(255, 255, 255, 0.8); 
+}
+#footer #footer-content a:hover{
+    color: rgba(255, 255, 255, 1); 
+}
+#footer p{
+    font-size: 13px;
+    line-height: 13px;
+}
+
+#footer #footer-sns{
+    float: right;
+    padding-top: 10px;
+}
+
+#footer #footer-sns div{
+    float: right;
+}
+
+#footer #footer-sns a{
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    margin-left: 10px;
+}
+#footer #footer-sns a#weibo{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_L@2x.png?imageMogr2/thumbnail/x80);
+}
+#footer #footer-sns a#weibo:hover{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_F@2x.png?imageMogr2/thumbnail/x80);
+}
+
+
+.headroom--pinned {
+    display: block;
+    margin-top: 0;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+}
+.headroom--unpinned {
+    margin-top: -80px;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+}
+
+@media (max-width: 768px){
+    .web .navbar .navbar-brand{
+            line-height: 18px;
+            height: 61px;
+            background-repeat: no-repeat;
+            background-position: 14px center;
+            background-size: 42px;
+            padding-left: 66px;
+            font-size: 14px;
+    }
+    .web .navbar .navbar-toggle{
+        height: 46px;
+        border: 0;
+        background-color: #f8f8f8;
+    }
+
+    .navbar-toggle .icon-bar+.icon-bar {
+        margin-top: 6px;
+    }
+    .web .navbar ul li a {
+        line-height: 31px;
+        height: 52px;
+        font-size: 14px;
+    }
+}
+
