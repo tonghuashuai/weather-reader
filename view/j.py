@@ -5,9 +5,9 @@ import json
 
 from view._base import JsonHandler
 from _route import route
-from model.user import User
+# from model.user import User
 from model.qiniu_ import qiniu_token
-from model.gid_ import gid
+# from model.gid_ import gid
 
 
 @route('/j/upload_token')
