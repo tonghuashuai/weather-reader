@@ -12,7 +12,7 @@ import logging
 from config import STATIC_HOST
 
 from model.jsob import JsOb
-from model.user import User
+# from model.user import User
 
 reload(sys)
 sys.setdefaultencoding('utf8')
