@@ -1,9 +1,5 @@
 <%!
-from config import APP, SLOGAN, QINIU, HOST
-from model.news import News
-from model.const import NEWS_CATAGORY
-news_milestone = News.latest_news(NEWS_CATAGORY.NEWS)
-news_startup = News.latest_news(NEWS_CATAGORY.STARTUP)
+from config import APP, SLOGAN
 %>
 <%inherit file="../_base.html" />
 <%block name="title">
@@ -13,112 +9,8 @@ ${APP}
     <link href="${STATIC_HOST}/css/index.css" rel="stylesheet">
 </%block>
 
-<div id="home-container">
-    <div id="home-decoration">
-    </div>
-    <div class="jumbotron t-align-c" id="home" style="background-image: url(${WEB_INFO.home_img});">
-        <div class="t-align-c" id="home-content">
-            <div id="slidedown1">
-                <div id="program-desc">
-                    一块投吧
-                </div>
-                <div id="program-desc-sub">
-                    全国首档全民参与的大型投创类电视节目，和最会赚钱的人一起投资<br>明星领投，全民跟投的真赚钱 TV Show
-                </div>
-            </div>
-            <div id="btn-reg-container">
-                <a href="/reg" id="btn-reg">我要上节目</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div style="height: 635px;"></div>
-<div class="jumbotron t-align-c">
-    <div class="container t-align-c">
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="home-item" id="startups">
-                    <a href="/1nvestors" title="一块投吧节目介绍">
-                        <div class="item-content" style="background-image: url(${WEB_INFO.program_img}?imageMogr2/thumbnail/910x);">
-                            <div class="home-item-title">节目介绍</div>
-                            &nbsp;
-                        </div>
-                    </a>
-                    <div class="item-title">
-                        <a href="/1nvestors" title="一块投吧节目介绍">
-                            <span class="item-title-p">
-                                一块投吧
-                            </span>
-                            <br>
-                            <span class="item-title-s">
-                                全国首档全民参与的大型投创类电视节目，和最会赚钱的人一起投资，明星领投，全民跟投的真赚钱TV Show
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="home-item" id="news">
-                    <a href="/news/${news_milestone.id_}" title="${news_milestone.title}">
-                        <div class="item-content" style="background-image: url(${QINIU.HOST}/${news_milestone.img});">
-                            <div class="home-item-title">大事记</div>
-                        </div>
-                    </a>
-                    <div class="item-title">
-                        <a href="/news/${news_milestone.id_}" title="${news_milestone.title}">
-                            <span class="item-title-p">
-                                ${news_milestone.title}
-                            </span>
-                            <br>
-                            <span class="item-title-s">
-                                ${news_milestone.summary}
-                            </span>
-                        </a>
-                        <a class="more" href="${HOST}/news/milestone">
-                            <span>更多</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="home-item" id="fund">
-                    <a href="javascript:void(0);" title="向日葵种子基金">
-                    <div id="fund-container">
-                        <div class="home-item-title">向日葵种子基金</div>
-                        <iframe src="http://www.70c.com/w/CCSSSSQ" width="322" height="641">&nbsp;</iframe>
-                    </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="home-item" id="video">
-                    <a href="/news/${news_startup.id_}" title="${news_startup.title}">
-                        <div class="item-content" style="background-image: url(${QINIU.HOST}/${news_startup.img}?imageMogr2/thumbnail/1000x);">
-                            <div class="home-item-title">路演项目精选</div>
-                            &nbsp;
-                        </div>
-                    </a>
-                    <div class="item-title">
-                        <a href="/news/${news_startup.id_}" title="${news_startup.title}">
-                            <span class="item-title-p">
-                                ${news_startup.title}
-                            </span>
-                            <br>
-                            <span class="item-title-s">
-                                ${news_startup.summary}
-                            </span>
-                            <a class="more" href="${HOST}/news/startup">
-                                <span>更多</span>
-                            </a>
-                        </a>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
+<div id="main">
+testss
 </div>
 <%block name="js">
     <script src="${STATIC_HOST}/js/index.js"></script>

@@ -5,17 +5,17 @@ DEBUG = True
 
 PORT = 8080
 
-APP = '向日葵传媒'
-APP_CN = 'Sunflower Media'
-SLOGAN = '不辜负每一个梦想'
+APP = '天气预报'
+APP_CN = ''
+SLOGAN = ''
 
 # HOST = 'http://xrkmedia.com'
 # STATIC_HOST = 'http://static.xrkmedia.com'
 
-HOST = 'http://c.cc:8088'
-STATIC_HOST = 'http://static.c.cc:8088'
+HOST = 'http://b.bb:8088'
+STATIC_HOST = 'http://static.b.bb:8088'
 
-DB = 'sunflower'
+DB = 'weather'
 
 MONGO_CONFIG = dict(
     host = "mongodb://127.0.0.1:27017",

@@ -13,8 +13,8 @@
             <%block name="title_"></%block> | ${APP} | ${SLOGAN}
             </%block>
         </title>
-        <meta name="keywords" content="${APP},${SLOGAN},一块投吧,北京传媒公司,传媒,xrkmedia,投创,众筹电视节目,投创类电视节目,投创类节目"/>
-        <meta name="description" content="向日葵传媒有限责任公司是一家现时代金融文化产品提供机构，致力于将中国优秀文化产品与金融服务相结合，打造传媒与金融相结合的投融资服务平台。" />
+        <meta name="keywords" content="${APP},${SLOGAN}"/>
+        <meta name="description" content="${APP},${SLOGAN}" />
         <link href="${STATIC_HOST}/css/_lib/bootstrap/bootstrap.min.css" rel="stylesheet">
         <link href="${STATIC_HOST}/css/_lib/bootstrap-dialog.min.css" rel="stylesheet">
         <link href="${STATIC_HOST}/css/_lib/poshytip/tip-twitter/tip-twitter.css" rel="stylesheet">
@@ -29,8 +29,6 @@
     </head>
 
     <body>
-        <img src="${WEB_INFO.logo}?imageMogr2/thumbnail/121x75" style="display: none;"/>
-        <img src="${WEB_INFO.logo}?imageMogr2/thumbnail/75x75" style="display: none;"/>
         ${next.body()}
     </body>
     <script  type="text/javascript">
