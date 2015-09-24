@@ -12,7 +12,8 @@ SLOGAN = ''
 # HOST = 'http://xrkmedia.com'
 # STATIC_HOST = 'http://static.xrkmedia.com'
 
-HOST = 'http://b.bb:8088'
+HOST_ = 'b.bb:8088'
+HOST = 'http://%s' % HOST_
 STATIC_HOST = 'http://static.b.bb:8088'
 
 DB = 'weather'

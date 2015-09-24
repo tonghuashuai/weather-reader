@@ -123,15 +123,4 @@ $.confirm = (callback, msg='确定？') ->
     )
 
 
-myElement = document.querySelector("header")
-
-if myElement
-    headroom  = new Headroom(myElement, {
-                        tolerance: {
-                          down : 10,
-                          up : 20
-                        },
-                        offset : 30
-                    })
-
-    headroom.init()
+$.ws = new WebSocket("ws://#{CONST.HOST_}/j/msg")

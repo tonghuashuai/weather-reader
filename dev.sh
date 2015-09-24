@@ -1,7 +1,7 @@
 while true
 do
-    python /home/tonghs/sunflower-website/misc/coffee_const.py
-    python /home/tonghs/sunflower-website/app.py
+    python /home/tonghs/weather-reader/misc/coffee_const.py
+    python /home/tonghs/weather-reader/app.py
 
     for i in $(seq 5)
     do

@@ -10,3 +10,8 @@ class index(BaseHandler):
     def get(self):
         self.render()
 
+@route('/ops')
+class ops(BaseHandler):
+    def get(self):
+        self.render()
+
