@@ -16,25 +16,19 @@ class upload_token(JsonHandler):
         key = gid()
         self.finish(qiniu_token(key))
 
-# @route('/j/msg')
-# class msg(JsonHandler):
-#     def post(self):
-#         self.finish()
 
 @route('/j/msg')
 class MsgSocket(tornado.websocket.WebSocketHandler):
-    #连接websocket服务器时进行的event
+    # event when connecting
     def open(self):
         clients.append(self)
 
-    #收到信息的时候进行的动作
-    def on_message(self, message):
-        #write_message用于主动写信息，这里将收到的信息原样返回
-        print u"You said: " + message
+    # event when geting msg
+    def on_message(self, msg):
         for client in clients:
-            client.write_message(u"You said: " + message)
+            client.write_message(msg)
 
-   #关系连接时的动作
+   # event when closing connecting
     def on_close(self):
         if self in clients:
             clients.remove(self)
