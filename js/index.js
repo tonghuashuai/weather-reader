@@ -2,7 +2,19 @@
 (function() {
   $.ws.onopen = function() {
     return $.ws.onmessage = function(evt) {
-      return $('#msg').html(evt.data);
+      var data, msg, ops;
+      data = $.parseJSON(evt.data);
+      ops = parseInt(data.ops);
+      msg = data.msg;
+      if (ops === CONST.ENUM.OPS_CATAGORY.MSG) {
+        return $('#msg').html(msg);
+      } else if (ops === CONST.ENUM.OPS_CATAGORY.OPS) {
+        if (msg === 'reload') {
+          return location.reload();
+        } else if (msg === 'refresh') {
+          return console.log('refresh data');
+        }
+      }
     };
   };
 

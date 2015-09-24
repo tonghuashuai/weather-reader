@@ -9,5 +9,5 @@ def_view(
         $scope.o = o
 
         $scope.submit =->
-            $.ws.send(o.msg)
+            $.ws.send(JSON.stringify(o))
 )

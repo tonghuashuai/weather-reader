@@ -7,7 +7,7 @@
     o.ops = CONST.ENUM.OPS_CATAGORY.MSG.toString();
     $scope.o = o;
     return $scope.submit = function() {
-      return $.ws.send(o.msg);
+      return $.ws.send(JSON.stringify(o));
     };
   });
 
