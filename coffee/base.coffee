@@ -123,4 +123,4 @@ $.confirm = (callback, msg='确定？') ->
     )
 
 
-$.ws = new WebSocket("ws://#{CONST.HOST_}/j/msg")
+$.ws = new ReconnectingWebSocket("ws://#{CONST.HOST_}/j/msg")

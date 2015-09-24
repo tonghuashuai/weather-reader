@@ -164,6 +164,6 @@
     });
   };
 
-  $.ws = new WebSocket("ws://" + CONST.HOST_ + "/j/msg");
+  $.ws = new ReconnectingWebSocket("ws://" + CONST.HOST_ + "/j/msg");
 
 }).call(this);
